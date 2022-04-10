@@ -5,7 +5,6 @@ import parse from "html-react-parser"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Author from "../components/author"
 
 const BlogIndex = ({
   data,
@@ -28,7 +27,6 @@ const BlogIndex = ({
 
   return (
     <Layout isHomePage>
-      <Author />
       <Seo title="All posts" />
  
       <Bio />
