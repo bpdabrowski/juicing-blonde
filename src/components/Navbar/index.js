@@ -8,6 +8,7 @@ import {
   NavBtn,
   NavBtnLink,
 } from './NavbarElements';
+import { Link } from "gatsby"
 
 const Navbar = () => {
     return (
@@ -16,18 +17,18 @@ const Navbar = () => {
           <Bars />
     
           <NavMenu>
-            <NavLink to='/challenges' activeStyle>
+            <Link to='/challenges' activeStyle>
               Challenges
-            </NavLink>
-            <NavLink to='/juice' activeStyle>
+            </Link>
+            <Link to='/juice' activeStyle>
               Juice
-            </NavLink>
-            <NavLink to='/food' activeStyle>
+            </Link>
+            <Link to='/food' activeStyle>
               Food
-            </NavLink>
-            <NavLink to='/about' activeStyle>
+            </Link>
+            <Link to='/about' activeStyle>
               About
-            </NavLink>
+            </Link>
             {/* Second Nav */}
             {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
           </NavMenu>
