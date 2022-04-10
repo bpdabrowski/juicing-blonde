@@ -1,6 +1,12 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import parse from "html-react-parser"
+import Navbar from './Navbar';
+import About from '../pages/about';
+import Challenges from '../pages/challenges';
+import Food from '../pages/food';
+import Juice from '../pages/juice';
 
 const Layout = ({ isHomePage, children }) => {
   const {
@@ -21,6 +27,15 @@ const Layout = ({ isHomePage, children }) => {
   return (
     <>
         <header className="global-header">
+          <Router>
+            <Navbar />
+            <Routes>
+              <Route path='/about' component={About} />
+              <Route path='/challenges' component={Challenges} />
+              <Route path='/food' component={Food} />
+              <Route path='/juice' component={Juice} />
+            </Routes>
+          </Router>
           {isHomePage ? (
             <div className="landing-wrapper" data-is-root-path={isHomePage}>
               <h1 className="main-heading">
