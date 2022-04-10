@@ -1,17 +1,11 @@
 import React from 'react';
+import Layout from '../components/layout';
   
 const Challenges = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'Right',
-        alignItems: 'Right',
-        height: '100vh'
-      }}
-    >
+    <Layout>
       <h1>Challenges</h1>
-    </div>
+    </Layout>
   );
 };
   

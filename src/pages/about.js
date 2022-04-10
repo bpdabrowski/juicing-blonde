@@ -1,17 +1,11 @@
 import React from 'react';
+import Layout from '../components/layout';
   
 const About = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'Right',
-        alignItems: 'Right',
-        height: '100vh'
-      }}
-    >
+    <Layout>
       <h1>About</h1>
-    </div>
+    </Layout>
   );
 };
   
