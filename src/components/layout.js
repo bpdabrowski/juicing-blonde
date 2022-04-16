@@ -24,24 +24,25 @@ const Layout = ({ isHomePage, children }) => {
     }
   `)
 
+  var wrapperName = "landing-wrapper"
+  if (!isHomePage) {
+    wrapperName = "non-landing-wrapper"
+  }
+
   return (
-    <>
-
-      {isHomePage ? (
-        <>
-          <div className="landing-wrapper" data-is-root-path={isHomePage}>
-            <Router>
-              <Navbar />
-              <Routes>
-                <Route path='/about' component={About} />
-                <Route path='/challenges' component={Challenges} />
-                <Route path='/food' component={Food} />
-                <Route path='/juice' component={Juice} />
-              </Routes>
-            </Router>
-          </div>
-
-        <div className="content">
+      <>
+        <div className={wrapperName} data-is-root-path={isHomePage}>
+          <Router>
+            <Navbar />
+            <Routes>
+              <Route path='/about' component={About} />
+              <Route path='/challenges' component={Challenges} />
+              <Route path='/food' component={Food} />
+              <Route path='/juice' component={Juice} />
+            </Routes>
+          </Router>
+        </div>
+        {/* <div className="content"> */}
           <main>{children}</main>
 
           <footer>
@@ -51,39 +52,8 @@ const Layout = ({ isHomePage, children }) => {
             {` `}
             And <a href="https://wordpress.org/">WordPress</a>
           </footer>
-        </div>
+        {/* </div> */}
       </>
-      ) : (
-        <>
-              <div className="non-landing-wrapper">
-                <Router>
-                  <Navbar />
-                  <Routes>
-                    <Route path='/about' component={About} />
-                    <Route path='/challenges' component={Challenges} />
-                    <Route path='/food' component={Food} />
-                    <Route path='/juice' component={Juice} />
-                  </Routes>
-                </Router>
-              </div>
-
-              <div className="content">
-                <main>{children}</main>
-
-                <footer>
-                  © {new Date().getFullYear()}, Built with
-                  {` `}
-                  <a href="https://www.gatsbyjs.com">Gatsby</a>
-                  {` `}
-                  And <a href="https://wordpress.org/">WordPress</a>
-                </footer>
-              </div>
-          </>
-      )}
-
-
-
-    </>
   )
 }
 
