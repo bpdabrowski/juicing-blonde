@@ -26,45 +26,63 @@ const Layout = ({ isHomePage, children }) => {
 
   return (
     <>
-        <header className="global-header">
-          {isHomePage ? (
-            <div className="landing-wrapper" data-is-root-path={isHomePage}>
-              <Router>
-                <Navbar />
-                <Routes>
-                  <Route path='/about' component={About} />
-                  <Route path='/challenges' component={Challenges} />
-                  <Route path='/food' component={Food} />
-                  <Route path='/juice' component={Juice} />
-                </Routes>
-              </Router>
-            </div>
-          ) : (
-            <div>
-              <Router>
-                <Navbar />
-                <Routes>
-                  <Route path='/about' component={About} />
-                  <Route path='/challenges' component={Challenges} />
-                  <Route path='/food' component={Food} />
-                  <Route path='/juice' component={Juice} />
-                </Routes>
-              </Router>
-            </div>
-          )}
-        </header>
 
-      <div className="non-landing-wrapper">
-        <main>{children}</main>
+      {isHomePage ? (
+        <>
+          <div className="landing-wrapper" data-is-root-path={isHomePage}>
+            <Router>
+              <Navbar />
+              <Routes>
+                <Route path='/about' component={About} />
+                <Route path='/challenges' component={Challenges} />
+                <Route path='/food' component={Food} />
+                <Route path='/juice' component={Juice} />
+              </Routes>
+            </Router>
+          </div>
 
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-          {` `}
-          And <a href="https://wordpress.org/">WordPress</a>
-        </footer>
-      </div>
+        <div className="content">
+          <main>{children}</main>
+
+          <footer>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.com">Gatsby</a>
+            {` `}
+            And <a href="https://wordpress.org/">WordPress</a>
+          </footer>
+        </div>
+      </>
+      ) : (
+        <>
+              <div className="non-landing-wrapper">
+                <Router>
+                  <Navbar />
+                  <Routes>
+                    <Route path='/about' component={About} />
+                    <Route path='/challenges' component={Challenges} />
+                    <Route path='/food' component={Food} />
+                    <Route path='/juice' component={Juice} />
+                  </Routes>
+                </Router>
+              </div>
+
+              <div className="content">
+                <main>{children}</main>
+
+                <footer>
+                  © {new Date().getFullYear()}, Built with
+                  {` `}
+                  <a href="https://www.gatsbyjs.com">Gatsby</a>
+                  {` `}
+                  And <a href="https://wordpress.org/">WordPress</a>
+                </footer>
+              </div>
+          </>
+      )}
+
+
+
     </>
   )
 }

@@ -326,6 +326,11 @@ a:focus {
 }
 
 .non-landing-wrapper {
+  margin-top: 0px;
+  height: 85px;
+}
+
+.content {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-10) var(--spacing-5);

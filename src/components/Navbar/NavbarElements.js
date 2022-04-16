@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
   
 export const Nav = styled.nav`
-  background: var(--color-landing);
+  background: transparent;
   height: 85px;
   display: flex;
   justify-content: space-between;
