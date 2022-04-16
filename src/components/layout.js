@@ -42,7 +42,7 @@ const Layout = ({ isHomePage, children }) => {
             </Routes>
           </Router>
         </div>
-        {/* <div className="content"> */}
+        <div className="content">
           <main>{children}</main>
 
           <footer>
@@ -52,7 +52,7 @@ const Layout = ({ isHomePage, children }) => {
             {` `}
             And <a href="https://wordpress.org/">WordPress</a>
           </footer>
-        {/* </div> */}
+        </div>
       </>
   )
 }
