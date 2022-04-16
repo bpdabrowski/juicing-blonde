@@ -1,26 +1,29 @@
 import { FaBars } from 'react-icons/fa';
-import { NavLink as Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
   
 export const Nav = styled.nav`
-  background: #63D471;
+  background: var(--color-landing);
   height: 85px;
   display: flex;
   justify-content: space-between;
-  padding: 0.2rem calc((100vw - 1000px) / 2);
+  padding: var(--spacing-0) var(--spacing-20) var(--spacing-0) var(--spacing-0); 
   z-index: 12;
+  float: right;
   /* Third Nav */
   /* justify-content: flex-start; */
 `;
-  
+
 export const NavLink = styled(Link)`
-  color: #808080;
+  color: var(--color-text);
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: var(--spacing-0) var(--spacing-12);
   height: 100%;
   cursor: pointer;
+  font-size: var(--fontSize-0);
+  font-family: var(--font-heading);
   &.active {
     color: #000000;
   }

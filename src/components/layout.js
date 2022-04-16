@@ -27,26 +27,29 @@ const Layout = ({ isHomePage, children }) => {
   return (
     <>
         <header className="global-header">
-          <Router>
-            <Navbar />
-            <Routes>
-              <Route path='/about' component={About} />
-              <Route path='/challenges' component={Challenges} />
-              <Route path='/food' component={Food} />
-              <Route path='/juice' component={Juice} />
-            </Routes>
-          </Router>
           {isHomePage ? (
             <div className="landing-wrapper" data-is-root-path={isHomePage}>
-              <h1 className="main-heading">
-                <Link to="/">{parse(title)}</Link>
-              </h1>
+              <Router>
+                <Navbar />
+                <Routes>
+                  <Route path='/about' component={About} />
+                  <Route path='/challenges' component={Challenges} />
+                  <Route path='/food' component={Food} />
+                  <Route path='/juice' component={Juice} />
+                </Routes>
+              </Router>
             </div>
           ) : (
-            <div className="non-landing-wrapper">
-              <Link className="header-link-home" to="/">
-                {title}
-              </Link>
+            <div>
+              <Router>
+                <Navbar />
+                <Routes>
+                  <Route path='/about' component={About} />
+                  <Route path='/challenges' component={Challenges} />
+                  <Route path='/food' component={Food} />
+                  <Route path='/juice' component={Juice} />
+                </Routes>
+              </Router>
             </div>
           )}
         </header>

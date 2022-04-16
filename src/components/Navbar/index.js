@@ -17,24 +17,22 @@ const Navbar = () => {
           <Bars />
     
           <NavMenu>
-            <Link to='/challenges' activeStyle>
+            <NavLink to='/' activeStyle>
+              Home
+            </NavLink>
+            <NavLink to='/challenges' activeStyle>
               Challenges
-            </Link>
-            <Link to='/juice' activeStyle>
+            </NavLink>
+            <NavLink to='/juice' activeStyle>
               Juice
-            </Link>
-            <Link to='/food' activeStyle>
+            </NavLink>
+            <NavLink to='/food' activeStyle>
               Food
-            </Link>
-            <Link to='/about' activeStyle>
+            </NavLink>
+            <NavLink to='/about' activeStyle>
               About
-            </Link>
-            {/* Second Nav */}
-            {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+            </NavLink>
           </NavMenu>
-          <NavBtn>
-            <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-          </NavBtn>
         </Nav>
       </>
     );
