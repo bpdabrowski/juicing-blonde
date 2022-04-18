@@ -29,32 +29,34 @@ const BlogIndex = ({
     <Layout isHomePage>
       <Seo title="All posts" />
  
-      <Bio />
+      {/* <Bio /> */}
 
       <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.title
+          <div className="row">
+            {posts.map(post => {
+              const title = post.title
 
-          return (
-            <li key={post.uri}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.uri} itemProp="url">
-                      <span itemProp="headline">{parse(title)}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.date}</small>
-                </header>
-                <section itemProp="description">{parse(post.excerpt)}</section>
-              </article>
-            </li>
-          )
-        })}
+              return (
+                <li key={post.uri}>
+                  <article
+                    className="post-list-item"
+                    itemScope
+                    itemType="http://schema.org/Article"
+                  > 
+                      <div className="column">
+                        <h2>
+                          <Link to={post.uri} itemProp="url">
+                            <span itemProp="headline">{parse(title)}</span>
+                          </Link>
+                        </h2>
+                        <small>{post.date}</small>
+                        <section itemProp="description">{parse(post.excerpt)}</section>
+                      </div>
+                  </article>
+                </li>
+              )
+            })}
+          </div>
       </ol>
 
       {previousPagePath && (

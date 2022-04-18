@@ -348,3 +348,28 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+/* Experimental */
+
+.content-container {
+  /* height: 100vh; */
+  background-color: lightgrey;
+  font-size: 10px;
+}
+.column {
+  background-color: lightyellow;
+  float: left;
+  width: 50%;
+  height: 300px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
