@@ -43,15 +43,19 @@ const BlogIndex = ({
                     itemScope
                     itemType="http://schema.org/Article"
                   > 
-                      <div className="column">
-                        <h2>
-                          <Link to={post.uri} itemProp="url">
-                            <span itemProp="headline">{parse(title)}</span>
-                          </Link>
-                        </h2>
-                        <small>{post.date}</small>
-                        <section itemProp="description">{parse(post.excerpt)}</section>
+                    <div className="column">
+                      <div className="stretchy-wrapper">
+                        <div>
+                          <h2 className="hide">
+                            <Link to={post.uri} itemProp="url">
+                              <span itemProp="headline" className="link-spanner">{parse(title)}</span>
+                            </Link>
+                          </h2>
+                          <small className="hide">{post.date}</small>
+                          {/* <section itemProp="description">{parse(post.excerpt)}</section> */}
+                        </div>
                       </div>
+                    </div>
                   </article>
                 </li>
               )
