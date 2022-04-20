@@ -46,13 +46,13 @@ const BlogIndex = ({
                     <div className="column">
                       <div className="stretchy-wrapper">
                         <div>
-                          <h2 className="hide">
-                            <Link to={post.uri} itemProp="url">
-                              <span itemProp="headline" className="link-spanner">{parse(title)}</span>
-                            </Link>
-                          </h2>
-                          <small className="hide">{post.date}</small>
-                          {/* <section itemProp="description">{parse(post.excerpt)}</section> */}
+                          <div className="post-title">
+                            <h2>{parse(title)}</h2>
+                              <Link to={post.uri} itemProp="url">
+                                <span itemProp="headline" className="link-spanner"></span>
+                              </Link>
+                            <small>{post.date}</small>
+                          </div>
                         </div>
                       </div>
                     </div>
