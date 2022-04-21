@@ -49,10 +49,11 @@ const BlogIndex = ({
                     itemType="http://schema.org/Article"
                   > 
                     <div className="column">
-                      <GatsbyImage 
+                      <div className="stretchy-wrapper">
+                      <GatsbyImage
                           image={featuredImage.data}
                           alt={featuredImage.alt}
-                          className="stretchy-wrapper">
+                        />
                         <div>
                           <div className="post-title">
                             <h2>{parse(title)}</h2>
@@ -62,7 +63,7 @@ const BlogIndex = ({
                             <small>{post.date}</small>
                           </div>
                         </div>
-                        </GatsbyImage>
+                      </div>
                     </div>
                   </article>
                 </li>
