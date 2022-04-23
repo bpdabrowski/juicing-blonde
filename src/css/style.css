@@ -355,7 +355,15 @@ a:focus {
 .column {
   float: left;
   width: 43%;
-  margin: 2rem 2rem;
+  /* margin: 2rem 2rem 2rem 2rem; */
+  margin: 2rem 2rem 5rem 2rem;
+}
+
+.column-stagger-margin {
+  float: left;
+  width: 43%;
+  /* margin: 2rem 2rem 2rem 2rem; */
+  margin: 7rem 2rem 2rem 2rem;
 }
 
 div.stretchy-wrapper {
@@ -374,7 +382,7 @@ div.stretchy-wrapper > div {
 	top: 0; bottom: 0; left: 0; right: 0;
   padding: 1rem;
   display: flex;
-  background: linear-gradient(#00000000, #00000038);;
+  background: linear-gradient(#00000000, #00000038);
   border-radius: 17px;
 }
 
@@ -407,6 +415,11 @@ div.stretchy-wrapper > div {
   }
 
   .column {
+    width: 100%;
+    margin: 2rem auto;
+  }
+
+  .column-stagger-margin {
     width: 100%;
     margin: 2rem auto;
   }

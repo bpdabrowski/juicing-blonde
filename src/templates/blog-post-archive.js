@@ -31,14 +31,17 @@ const BlogIndex = ({
       <Seo title="All posts" />
  
       {/* <Bio /> */}
-
       <ol style={{ listStyle: `none` }}>
           <div className="row">
-            {posts.map(post => {
+            {posts.map((post, index) => {
               const title = post.title
               const featuredImage = {
                 data: post.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData,
                 alt: post.featuredImage?.node?.alt || ``,
+              }
+              var staggerMarginClass = "column"
+              if (index === 1 || index === 3) {
+                staggerMarginClass = "column-stagger-margin"
               }
 
               return (
@@ -48,7 +51,7 @@ const BlogIndex = ({
                     itemScope
                     itemType="http://schema.org/Article"
                   > 
-                    <div className="column">
+                    <div className={staggerMarginClass}>
                       <div className="stretchy-wrapper">
                       <GatsbyImage
                           image={featuredImage.data}
@@ -71,14 +74,6 @@ const BlogIndex = ({
             })}
           </div>
       </ol>
-
-      {previousPagePath && (
-        <>
-          <Link to={previousPagePath}>Previous page</Link>
-          <br />
-        </>
-      )}
-      {nextPagePath && <Link to={nextPagePath}>Next page</Link>}
     </Layout>
   )
 }
