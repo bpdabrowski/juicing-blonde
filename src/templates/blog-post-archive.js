@@ -31,6 +31,7 @@ const BlogIndex = ({
       <Seo title="All posts" />
  
       {/* <Bio /> */}
+      <h2 className="recent-posts-heading">Recent Posts</h2>
       <ol style={{ listStyle: `none` }}>
           <div className="row">
             {posts.map((post, index) => {
@@ -74,6 +75,11 @@ const BlogIndex = ({
             })}
           </div>
       </ol>
+      <div className="button-container">
+        <a className="button" href="../all-posts">
+          View Posts
+        </a>
+      </div>
     </Layout>
   )
 }
