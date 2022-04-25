@@ -1,5 +1,4 @@
 import React from 'react';
-import BlogIndex from '../templates/blog-post-archive';
 import Layout from '../components/layout';
   
 const AllPosts = () => {

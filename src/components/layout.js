@@ -1,7 +1,6 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import parse from "html-react-parser"
 import Navbar from './Navbar';
 import About from '../pages/about';
 import Challenges from '../pages/challenges';

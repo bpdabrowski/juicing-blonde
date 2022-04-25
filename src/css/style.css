@@ -423,19 +423,7 @@ div.stretchy-wrapper > div {
     width: 100%;
     margin: 2rem auto;
   }
-
-  /* div.stretchy-wrapper > div .post-title {
-    visibility: visible;
-  } */
 }
-
-/* div.stretchy-wrapper > div:hover .post-title {
-  visibility: visible;
-}
-
-div.stretchy-wrapper > div .post-title {
-  visibility: hidden;
-} */
 
 .link-spanner {
   position:absolute; 
@@ -486,3 +474,7 @@ div.stretchy-wrapper > div .post-title {
   justify-content: center;
   margin-top: 83px;
 }
+
+/* .test-img-class {
+    border-radius: 17px;
+} */
