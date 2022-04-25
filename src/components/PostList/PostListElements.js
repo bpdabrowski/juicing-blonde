@@ -8,6 +8,12 @@ export const CellHolder = styled.div`
   margin-right: 2rem;
   margin-bottom: ${props => props.marginBottom};
   margin-left: 2rem;
+
+  @media screen and (max-width: 954px) {
+    width: 100%;
+    margin: 2rem auto;
+  }
+
 `
 
 export const StretchWrapper = styled.div`

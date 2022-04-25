@@ -8,17 +8,13 @@ import {
     CellHolder,
     StretchWrapper,
     PostTitle,
-    LinkSpanner,
-    Image
+    LinkSpanner
   } from './PostListElements';
 import { css } from 'styled-components';
 
 const PostList = ({
-    data
+    posts
   }) => {
-
-    const posts = data.allWpPost.nodes
-
     return (
         <React.Fragment>
             <HeadingText fontSize="var(--fontSize-4)">Recent Posts</HeadingText>
