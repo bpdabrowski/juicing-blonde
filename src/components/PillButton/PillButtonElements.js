@@ -4,26 +4,25 @@ export const ButtonContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 83px;
 `
 export const ButtonRoute = styled.a`
-    background-color: #5E9270;
+    background-color: var(--color-accent);
     border: none;
     color: white;
-    padding: 14px 26px;
+    padding: var(--spacing-4) var(--spacing-8);
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 4px 2px;
+    margin: var(--spacing-20) var(--spacing-0);
     cursor: pointer;
-    border-radius: 21px;
-    font-family: Questrial;
+    border-radius: 30px;
+    font-family: Questrial, var(--font-heading);
     font-weight: var(--fontWeight-semibold);
     text-transform: capitalize;
-    font-size: 15px;
+    font-size: var(--fontSize-1);
 
   &:hover {
     background-color: white;
-    color: #5E9270; 
+    color: var(--color-accent); 
   }
 `

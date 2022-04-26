@@ -10,7 +10,6 @@ import {
     PostTitle,
     LinkSpanner
   } from './PostListElements';
-import { css } from 'styled-components';
 
 const PostList = ({
     posts
@@ -25,18 +24,18 @@ const PostList = ({
                     data: post.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData,
                     alt: post.featuredImage?.node?.alt || ``,
                 }
-                var marginTop = "2rem";
-                var marginBottom = "5rem";
+                var marginTop = "var(--spacing-8)";
+                var marginBottom = "var(--spacing-20)";
                 if (index % 2 !== 0) {
-                    marginTop = "7rem";
-                    marginBottom = "2rem";
+                    marginTop = "var(--spacing-28)";
+                    marginBottom = "var(--spacing-8)";
                 }
         
                 return (
                     <CellHolder marginTop={marginTop} marginBottom={marginBottom}>
                         <StretchWrapper>
                             <GatsbyImage
-                                imgStyle={{borderRadius: "17px"}}
+                                imgStyle={{borderRadius: "var(--img-borderRadius)"}}
                                 image={featuredImage.data}
                                 alt={featuredImage.alt}
                             />
