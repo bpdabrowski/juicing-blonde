@@ -10,8 +10,9 @@
   --maxWidth-2xl: 42rem;
   --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
+  --maxWidth-5xl: 70rem;
   --maxWidth-full: "100%";
-  --maxWidth-wrapper: var(--maxWidth-2xl);
+  --maxWidth-wrapper: var(--maxWidth-5xl);
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -26,6 +27,7 @@
   --spacing-16: 4rem;
   --spacing-20: 5rem;
   --spacing-24: 6rem;
+  --spacing-28: 7rem;
   --spacing-32: 8rem;
   --fontFamily-sans: Poppins, Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
@@ -60,7 +62,8 @@
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
   --color-heading-black: black;
-  --color-accent: #d1dce5;
+  --color-accent: #5E9270;
+  --img-borderRadius: 17px;
 }
 
 /* HTML elements */
@@ -82,6 +85,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background-color: var(--color-landing);
 }
 
 footer {
@@ -247,7 +251,6 @@ a:focus {
   max-width: var(--maxWidth-full);
   height: 100vh;
   background-size: cover;
-  background-color: var(--color-landing);
   background-position: center;
   position: relative;
 }

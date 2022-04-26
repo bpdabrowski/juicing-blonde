@@ -1,14 +1,12 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import parse from "html-react-parser"
-
+import { graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import PostList from '../components/PostList';
 
 const BlogIndex = ({
-  data,
-  pageContext: { nextPagePath, previousPagePath },
+  data
 }) => {
   const posts = data.allWpPost.nodes
 
@@ -28,42 +26,7 @@ const BlogIndex = ({
   return (
     <Layout isHomePage>
       <Seo title="All posts" />
- 
-      <Bio />
-
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.title
-
-          return (
-            <li key={post.uri}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.uri} itemProp="url">
-                      <span itemProp="headline">{parse(title)}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.date}</small>
-                </header>
-                <section itemProp="description">{parse(post.excerpt)}</section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
-
-      {previousPagePath && (
-        <>
-          <Link to={previousPagePath}>Previous page</Link>
-          <br />
-        </>
-      )}
-      {nextPagePath && <Link to={nextPagePath}>Next page</Link>}
+      <PostList posts={posts}/>
     </Layout>
   )
 }
@@ -83,6 +46,15 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         excerpt
+        featuredImage {
+          node {
+            localFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
+        }
       }
     }
   }

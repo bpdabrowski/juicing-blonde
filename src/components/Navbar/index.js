@@ -5,14 +5,10 @@ import {
   NavLink,
   Bars,
   NavMenu,
-  NavBtn,
-  NavBtnLink,
 } from './NavbarElements';
-import { Link } from "gatsby"
 
 const Navbar = () => {
     return (
-      <>
         <Nav>
           <Bars />
     
@@ -34,7 +30,6 @@ const Navbar = () => {
             </NavLink>
           </NavMenu>
         </Nav>
-      </>
     );
   };
     
