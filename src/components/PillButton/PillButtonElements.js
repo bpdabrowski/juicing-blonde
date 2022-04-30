@@ -3,19 +3,19 @@ import styled from 'styled-components';
 export const ButtonContainer = styled.div`
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: ${props => props.position};
 `
 export const ButtonRoute = styled.a`
     background-color: var(--color-accent);
     border: none;
     color: white;
-    padding: var(--spacing-4) var(--spacing-8);
+    padding: var(--spacing-4) var(--spacing-20);
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: var(--spacing-20) var(--spacing-0);
+    margin: ${props => props.margin} var(--spacing-0);
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 10px;
     font-family: Questrial, var(--font-heading);
     font-weight: var(--fontWeight-semibold);
     text-transform: capitalize;

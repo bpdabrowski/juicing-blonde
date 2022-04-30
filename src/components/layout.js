@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
+import LandingText from './LandingText';
 import About from '../pages/about';
 import Challenges from '../pages/challenges';
 import Food from '../pages/food';
@@ -24,7 +25,9 @@ const Layout = ({ isHomePage, children }) => {
   `)
 
   var wrapperName = "landing-wrapper"
-  if (!isHomePage) {
+  if (isHomePage) {
+    var landingText = <LandingText />
+  } else {
     wrapperName = "non-landing-wrapper"
   }
 
@@ -40,6 +43,7 @@ const Layout = ({ isHomePage, children }) => {
               <Route path='/juice' component={Juice} />
             </Routes>
           </Router>
+          {landingText}
         </div>
         <div className="content">
           <main>{children}</main>

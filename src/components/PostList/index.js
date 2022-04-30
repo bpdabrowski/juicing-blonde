@@ -53,7 +53,7 @@ const PostList = ({
                 )
             })}
 
-            <PillButton />
+            <PillButton text="View Posts" action="../all-posts" position="center" margin="20" />
         </React.Fragment>
     );
   };

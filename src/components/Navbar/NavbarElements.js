@@ -10,6 +10,8 @@ export const Nav = styled.nav`
   padding: var(--spacing-0) var(--spacing-20) var(--spacing-0) var(--spacing-0); 
   z-index: 12;
   float: right;
+  width: 100vw;
+  flex-direction: row-reverse;
   /* Third Nav */
   /* justify-content: flex-start; */
 `;
