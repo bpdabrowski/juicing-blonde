@@ -29,7 +29,6 @@ export const TextContainer = styled.div`
 
 export const ChildTextContainer = styled.div`
   width: ${props => props.width};
-  display: flex;
   float: right;
   margin-top: var(--spacing-5);
   min-width: 25%;

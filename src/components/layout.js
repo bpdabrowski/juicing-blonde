@@ -25,7 +25,9 @@ const Layout = ({ isHomePage, children }) => {
   `)
 
   var wrapperName = "landing-wrapper"
-  if (!isHomePage) {
+  if (isHomePage) {
+    var landingText = <LandingText />
+  } else {
     wrapperName = "non-landing-wrapper"
   }
 
@@ -41,7 +43,7 @@ const Layout = ({ isHomePage, children }) => {
               <Route path='/juice' component={Juice} />
             </Routes>
           </Router>
-          <LandingText />
+          {landingText}
         </div>
         <div className="content">
           <main>{children}</main>
