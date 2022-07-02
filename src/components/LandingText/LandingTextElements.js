@@ -1,45 +1,67 @@
 import styled from 'styled-components';
 
-export const TextContainer = styled.div`
-  ${'' /* display: flex;
-  width: 100%;
-  justify-content: right; */}
-  width: 54%;
-  ${'' /* border: 1px solid #c3c3c3; */}
-  ${'' /* display: flex; */}
+export const LandingRightContainer = styled.div`
+  width: var(--maxWidth-3xl);
+  min-width: var(--maxWidth-3xl);
   float: right;
-  margin-right: 78px;
-  margin-top: 50px;
+  margin-right: var(--spacing-20);
+  margin-top: var(--spacing-12);
+  @media (max-width: 915px) {
+    min-width: 0px;
+    width: 100vw;
+    float: left;
+  }
 `
 
-export const ChildTextConteiner = styled.div`
-    width: 100%;
-  ${'' /* border: 1px solid #c3c3c3; */}
+export const TextContainer = styled.div`
+  width: var(--maxWidth-3xl);
+  min-width: var(--maxWidth-3xl);
+  flex-direction: ${props => props.flexDirection};
+  float: right;
+  @media (max-width: 915px) {
+    min-width: var(--spacing-0);
+    width: 100vw;
+    float: left;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+`
+
+export const ChildTextContainer = styled.div`
+  width: ${props => props.width};
   display: flex;
   float: right;
-  margin-top: 18px;
+  margin-top: var(--spacing-5);
+  min-width: 25%;
+  @media (max-width: 915px) {
+    width: 100%;
+  }
 `
 
-export const PoppinsText = styled.div`
+export const HeadTitleText = styled.div`
     font-family: "Poppins", var(--font-heading);
-    padding: 4px;
-    font-size: 28px;
+    padding: var(--spacing-1);
+    font-size: var(--fontSize-4);
     font-weight: var(--fontWeight-semibold);
     color: var(--color-accent);
 `
 
-export const LargePoppinsText = styled.div`
+export const HeadMainText = styled.div`
     font-family: "Poppins", var(--font-heading);
-    padding: 4px;
+    padding: var(--spacing-1);
     font-size: 69px;
-    font-weight: var(--fontWeight-semibold)
+    font-weight: var(--fontWeight-semibold);
 `
 
-export const SmallPoppinsText = styled.div`
+export const HeadSubText = styled.div`
     font-family: "Poppins", var(--font-heading);
-    padding: 4px;
-    font-size: 18px;
-    margin-top: 18px;
-    margin-left: 30px;
-    padding-top: 30px;
+    padding: var(--spacing-1);
+    font-size: var(--fontSize-2);
+    margin-top: var(--spacing-0);
+    margin-left: var(--spacing-8);
+    padding-top: var(--spacing-8);
+    line-height: 2.0;
+    @media (max-width: 915px) {
+      margin-left: var(--spacing-0);
+    }
 `

@@ -1,22 +1,34 @@
 import React from 'react';
 import {
   TextContainer,
-  PoppinsText,
-  LargePoppinsText,
-  ChildTextConteiner,
-  SmallPoppinsText
+  HeadTitleText,
+  HeadMainText,
+  ChildTextContainer,
+  HeadSubText,
+  LandingRightContainer
 } from './LandingTextElements';
-import { HeadingText } from '../Stateless/HeadingText';
 
 const LandingText = () => {
     return (
-        <TextContainer>
-            <PoppinsText>Go green.</PoppinsText>
-            <ChildTextConteiner>
-                <LargePoppinsText>The world of plants.</LargePoppinsText>
-                <SmallPoppinsText>Discover everything you need to know about your plants, treat them with kindness and they will take care of you.</SmallPoppinsText>
-            </ChildTextConteiner>
-        </TextContainer>
+        <React.Fragment>
+        <LandingRightContainer>
+            <TextContainer flexDirection="row">
+                <HeadTitleText>Go green.</HeadTitleText>
+            </TextContainer>    
+            <TextContainer flexDirection="row-reverse">    
+                <ChildTextContainer width="50%">
+                    <HeadSubText>Discover everything you need to know about your plants, treat them with kindness and they will take care of you.</HeadSubText>
+                </ChildTextContainer>
+                <ChildTextContainer width="50%">
+                    <HeadMainText>
+                        The world 
+                        <br></br>
+                        of plants
+                    </HeadMainText>
+                </ChildTextContainer>
+            </TextContainer>
+            </LandingRightContainer>
+        </React.Fragment>
     );
   };
     
