@@ -27,12 +27,12 @@ module.exports = {
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
         url: `https://rigid-haircut.localsite.io/graphql`,
-        htaccess: {
-          username: `synonym`,
-          auth: {
-            password: `memorable`,
+        auth: {
+          htaccess: {
+            username: "synonym",
+            password: "memorable",
           }
-        }
+        },
       },
     },
 
