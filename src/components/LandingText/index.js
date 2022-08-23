@@ -5,29 +5,44 @@ import {
   HeadMainText,
   ChildTextContainer,
   HeadSubText,
-  LandingRightContainer
+  LandingRightContainer,
+  MainLandingContainer,
+  ImageContainer,
 } from './LandingTextElements';
+import { StaticImage } from "gatsby-plugin-image"
+import PillButton from '../PillButton'
 
 const LandingText = () => {
     return (
         <React.Fragment>
-        <LandingRightContainer>
-            <TextContainer flexDirection="row">
-                <HeadTitleText>Go green.</HeadTitleText>
-            </TextContainer>    
-            <TextContainer flexDirection="row-reverse">    
-                <ChildTextContainer width="50%">
-                    <HeadSubText>Discover everything you need to know about your plants, treat them with kindness and they will take care of you.</HeadSubText>
-                </ChildTextContainer>
-                <ChildTextContainer width="50%">
-                    <HeadMainText>
-                        The world 
-                        <br></br>
-                        of plants
-                    </HeadMainText>
-                </ChildTextContainer>
-            </TextContainer>
-            </LandingRightContainer>
+            <MainLandingContainer>
+                <LandingRightContainer>
+                </LandingRightContainer>
+                <LandingRightContainer>
+                    <TextContainer paddingTop="var(--spacing-20)">
+                        <HeadTitleText>Juicing Blonde</HeadTitleText>
+                    </TextContainer>   
+                    <TextContainer>
+                        <ChildTextContainer width="37%">
+                            <HeadMainText>
+                                The world
+                                <br></br>
+                                of juicing
+                            </HeadMainText>
+                        </ChildTextContainer>
+                        <ChildTextContainer width="50%">
+                            <HeadSubText>Discover everything you need to know about juicing, treat your body with kindness and it will take care of you.</HeadSubText>
+                        </ChildTextContainer>
+                    </TextContainer>
+                        <PillButton text="Contact Me" action="mailto: ashley@juicingblonde.com" margin="8"/>
+                </LandingRightContainer>
+                <ImageContainer width="33%">
+                    <StaticImage 
+                        src="/Users/bdabrowski/Projects/juicing-blonde/react/content/assets/mainLandingPicture.png" 
+                        placeholder="blurred"                            
+                    />    
+                </ImageContainer>
+            </MainLandingContainer>
         </React.Fragment>
     );
   };

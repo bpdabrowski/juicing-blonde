@@ -4,11 +4,12 @@ import {
     ButtonRoute
   } from './PillButtonElements';
   
-const PillButton = () => {
+const PillButton = ({ text, action, position, margin }) => {
+
   return (
-    <ButtonContainer>
-        <ButtonRoute href="../all-posts">
-            View Posts
+    <ButtonContainer position={position}>
+        <ButtonRoute href={action} margin={`var(--spacing-${margin})`}>
+            {text}
         </ButtonRoute>
     </ButtonContainer>
   );

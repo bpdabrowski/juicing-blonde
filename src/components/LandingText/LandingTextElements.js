@@ -1,11 +1,22 @@
 import styled from 'styled-components';
 
+export const MainLandingContainer = styled.div`
+  float: right;
+  @media (max-width: 915px) {
+    min-width: 0px;
+    width: 100vw;
+    float: left;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+`;
+
 export const LandingRightContainer = styled.div`
-  width: var(--maxWidth-3xl);
+  width: 66vw;
   min-width: var(--maxWidth-3xl);
   float: right;
-  margin-right: var(--spacing-20);
-  margin-top: var(--spacing-12);
+  padding-left: var(--spacing-20);
+  padding-right: var(--spacing-20);
   @media (max-width: 915px) {
     min-width: 0px;
     width: 100vw;
@@ -14,23 +25,28 @@ export const LandingRightContainer = styled.div`
 `
 
 export const TextContainer = styled.div`
-  width: var(--maxWidth-3xl);
-  min-width: var(--maxWidth-3xl);
-  flex-direction: ${props => props.flexDirection};
-  float: right;
+  padding-top: ${props => props.paddingTop};
   @media (max-width: 915px) {
     min-width: var(--spacing-0);
     width: 100vw;
     float: left;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 `
 
 export const ChildTextContainer = styled.div`
   width: ${props => props.width};
-  float: right;
-  margin-top: var(--spacing-5);
+  float: left;
+  min-width: 25%;
+  @media (max-width: 915px) {
+    width: 100%;
+  }
+`
+
+export const ImageContainer = styled.div`
+  width: ${props => props.width};
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 75%, transparent 100%);
   min-width: 25%;
   @media (max-width: 915px) {
     width: 100%;
@@ -40,7 +56,7 @@ export const ChildTextContainer = styled.div`
 export const HeadTitleText = styled.div`
     font-family: "Poppins", var(--font-heading);
     padding: var(--spacing-1);
-    font-size: var(--fontSize-4);
+    font-size: var(--fontSize-5);
     font-weight: var(--fontWeight-semibold);
     color: var(--color-accent);
 `
