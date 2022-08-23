@@ -26,7 +26,7 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
-        url: `http://juicingblonde.local/graphql`,
+        url: `https://rigid-haircut.localsite.io/graphql`,
       },
     },
 
