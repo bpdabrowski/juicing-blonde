@@ -30,7 +30,7 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
-        url: `https://rigid-haircut.localsite.io/graphql`,
+        url: process.env.WP_URL,
         auth: {
           htaccess: {
             username: process.env.HTTPBASICAUTH_USERNAME,
