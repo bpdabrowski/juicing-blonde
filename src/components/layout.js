@@ -8,6 +8,8 @@ import Challenges from '../pages/challenges';
 import Food from '../pages/food';
 import Juice from '../pages/juice';
 
+import Loadable from "@loadable/component"
+
 const Layout = ({ isHomePage, children }) => {
   const {
     wp: {
@@ -60,4 +62,6 @@ const Layout = ({ isHomePage, children }) => {
   )
 }
 
-export default Layout
+const LoadableLayout = Loadable(() => import("./Layout"))
+
+export default LoadableLayout

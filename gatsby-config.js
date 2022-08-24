@@ -6,6 +6,10 @@
  *
  */
 
+ require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   /**
    * Adding plugins to this array adds them to your Gatsby site.
@@ -26,11 +30,11 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
-        url: `https://rigid-haircut.localsite.io/graphql`,
+        url: process.env.WP_URL,
         auth: {
           htaccess: {
-            username: "synonym",
-            password: "memorable",
+            username: process.env.HTTPBASICAUTH_USERNAME,
+            password: process.env.HTTPBASICAUTH_PASSWORD,
           }
         },
       },
