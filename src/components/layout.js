@@ -7,8 +7,9 @@ import About from '../pages/about';
 import Challenges from '../pages/challenges';
 import Food from '../pages/food';
 import Juice from '../pages/juice';
-
 import Loadable from "@loadable/component"
+
+const LoadableRouter = Loadable(() => import("./NavbarRouter"))
 
 const Layout = ({ isHomePage, children }) => {
   const {
@@ -36,15 +37,7 @@ const Layout = ({ isHomePage, children }) => {
   return (
       <>
         <div className={wrapperName} data-is-root-path={isHomePage}>
-          <Router>
-            <Navbar />
-            <Routes>
-              <Route path='/about' component={About} />
-              <Route path='/challenges' component={Challenges} />
-              <Route path='/food' component={Food} />
-              <Route path='/juice' component={Juice} />
-            </Routes>
-          </Router>
+          <LoadableRouter />
           {landingText}
         </div>
         <div className="content">
@@ -62,6 +55,7 @@ const Layout = ({ isHomePage, children }) => {
   )
 }
 
-const LoadableLayout = Loadable(() => import("./Layout"))
+// const LoadableLayout = Loadable(() => Layout)
+// const LoadableLayout = Loadable(() => import("./Layout"))
 
-export default LoadableLayout
+export default Layout
