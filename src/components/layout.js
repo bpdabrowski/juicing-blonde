@@ -1,12 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './Navbar';
 import LandingText from './LandingText';
-import About from '../pages/about';
-import Challenges from '../pages/challenges';
-import Food from '../pages/food';
-import Juice from '../pages/juice';
 import Loadable from "@loadable/component"
 
 const LoadableRouter = Loadable(() => import("./NavbarRouter"))
